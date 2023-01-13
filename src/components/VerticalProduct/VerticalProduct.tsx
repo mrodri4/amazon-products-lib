@@ -1,10 +1,11 @@
+import { BuyCta } from '../BuyCta/BuyCta';
 import type { VerticalProductProps } from './VerticalProduct.type';
 
 export function VerticalProduct(props: VerticalProductProps) {
   const {
     bestseller,
     cta = 'Comprar en Amazon',
-    title,
+    label,
     image,
     url,
     tag,
@@ -21,19 +22,19 @@ export function VerticalProduct(props: VerticalProductProps) {
       <a
         className='apl-block apl-mb-4'
         href={url}
-        title={title}
+        title={label}
         rel="nofollow noopener sponsored noreferrer"
         target="_blank">
-        <img decoding="async" src={image} alt={title} />
+        <img decoding="async" src={image} alt={label} />
       </a>
       <div>
         <a
           className='amazon-product-title'
           href={url}
-          title={title}
+          title={label}
           rel="nofollow noopener sponsored noreferrer"
           target="_blank">
-          {title}
+          {label}
         </a>
         <div className='apl-flex apl-items-center apl-justify-between apl-my-4'>
           <a
@@ -47,14 +48,7 @@ export function VerticalProduct(props: VerticalProductProps) {
           <span className='amazon-product-price'>{price}</span>
         </div>
       </div>
-      <a
-        className='amazon-cta'
-        href={url}
-        title={cta}
-        rel="nofollow noopener sponsored noreferrer"
-        target="_blank">
-        {cta}
-      </a>
+      <BuyCta text={cta} url={url} />
     </div>
   );
 }
