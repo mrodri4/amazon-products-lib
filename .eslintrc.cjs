@@ -29,7 +29,13 @@ module.exports = {
         ],
         'tailwindcss/classnames-order': 'off',
         'capitalized-comments': 'off',
-        'no-warning-comments': 'off'
+        'no-warning-comments': 'off',
+        'tailwindcss/no-custom-classname': [
+          'warn',
+          {
+            whitelist: ['(?(apl)\\-).*']
+          }
+        ]
       }
     },
     {
