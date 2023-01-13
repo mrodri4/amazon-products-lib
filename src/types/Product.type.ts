@@ -1,4 +1,4 @@
-export type VerticalProductProps = {
+export type ProductProps = {
   bestseller?: number;
   cta?: string;
   label: string;

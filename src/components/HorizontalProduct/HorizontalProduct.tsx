@@ -1,7 +1,7 @@
 import type { ProductProps } from '../../types/Product.type';
 import { BuyCta } from '../BuyCta/BuyCta';
 
-export function VerticalProduct(props: ProductProps) {
+export function HorizontalProduct(props: ProductProps) {
   const {
     bestseller,
     cta = 'Comprar en Amazon',
@@ -13,23 +13,23 @@ export function VerticalProduct(props: ProductProps) {
   } = props;
 
   return (
-    <div className='apl-border-[1px] apl-rounded-sm apl-px-3 apl-py-4 apl-max-w-sm apl-relative'>
+    <div className='apl-border-[2px] apl-box-border apl-rounded-sm apl-px-6 apl-py-10 apl-max-w-lg apl-relative apl-flex'>
       {
         (typeof bestseller === 'number') && (
           <span className='apl-font-semibold apl-text-xs apl-uppercase apl-absolute apl-top-2 -apl-left-2 apl-p-1 apl-bg-cyan-300'>Bestseller nº {bestseller}</span>
         )
       }
       <a
-        className='apl-block apl-mb-4'
+        className='apl-block apl-mr-8 apl-max-w-[40%]'
         href={url}
         title={label}
         rel="nofollow noopener sponsored noreferrer"
         target="_blank">
         <img decoding="async" src={image} alt={label} />
       </a>
-      <div>
+      <div className='apl-flex apl-flex-col apl-min-h-full apl-justify-between'>
         <a
-          className='amazon-product-title'
+          className='amazon-product-title apl-mt-0'
           href={url}
           title={label}
           rel="nofollow noopener sponsored noreferrer"
@@ -47,8 +47,8 @@ export function VerticalProduct(props: ProductProps) {
           </a>
           <span className='amazon-product-price'>{price}</span>
         </div>
+        <BuyCta text={cta} url={url} />
       </div>
-      <BuyCta text={cta} url={url} />
     </div>
   );
 }
