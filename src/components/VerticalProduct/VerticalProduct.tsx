@@ -25,7 +25,7 @@ export function VerticalProduct(props: ProductProps) {
         title={label}
         rel="nofollow noopener sponsored noreferrer"
         target="_blank">
-        <img decoding="async" src={image} alt={label} />
+        <img className='apl-max-h-[250px] apl-object-contain apl-w-full' decoding="async" src={image} alt={label} />
       </a>
       <div>
         <a
