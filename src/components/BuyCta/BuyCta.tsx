@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import type { BuyCtaProps } from './BuyCta.type';
+import type { BuyCtaProps } from '../../types/BuyCta.type';
 
 import './BuyCta.css';
 
