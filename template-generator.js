@@ -23,7 +23,7 @@ try {
       const titleValue = $('#productTitle').text().trim();
       const title = titleValue.length > maxTitleSize ? `${titleValue.substring(0, maxTitleSize)}...` : titleValue;
       const image = $('#landingImage').attr('data-old-hires').trim();
-      const price = $('#corePriceDisplay_desktop_feature_div .a-price.priceToPay .a-offscreen').text().trim();
+      const price = $('#corePriceDisplay_desktop_feature_div .a-price.priceToPay .a-offscreen:first-child').first().text().trim();
       const tag = componentsMap[component];
       const result = `<${tag} url="${url}" label="${title}" image="${image}" price="${price}"></${tag}>`;
 
