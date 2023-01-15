@@ -25,6 +25,6 @@ export default defineConfig({
       formats: ['iife']
     },
     sourcemap: false,
-    outDir: './dist'
+    outDir: './amazon-products-lib'
   }
 });
