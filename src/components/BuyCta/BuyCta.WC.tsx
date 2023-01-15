@@ -16,4 +16,4 @@ export class BuyCtaWc extends WebComponent<BuyCtaProps> {
   }
 }
 
-customElements.define('apl-vertical-product', BuyCtaWc);
+customElements.define('apl-buy-cta', BuyCtaWc);
