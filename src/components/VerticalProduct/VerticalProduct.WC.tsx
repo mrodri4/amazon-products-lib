@@ -16,4 +16,6 @@ export class VerticalProductWc extends WebComponent<ProductProps> {
   }
 }
 
-customElements.define('apl-vertical-product', VerticalProductWc);
+if (!customElements.get('apl-vertical-product')) {
+  customElements.define('apl-vertical-product', VerticalProductWc);
+}

@@ -16,4 +16,6 @@ export class HorizontalProductWc extends WebComponent<ProductProps> {
   }
 }
 
-customElements.define('apl-horizontal-product', HorizontalProductWc);
+if (!customElements.get('apl-horizontal-product')) {
+  customElements.define('apl-horizontal-product', HorizontalProductWc);
+}
