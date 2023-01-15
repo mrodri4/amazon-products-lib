@@ -1,4 +1,4 @@
-import type { ProductProps } from '../../types/Product.type';
+import type { ProductProps } from '#types';
 import { BuyCta } from '../BuyCta/BuyCta';
 
 export function HorizontalProduct(props: ProductProps) {

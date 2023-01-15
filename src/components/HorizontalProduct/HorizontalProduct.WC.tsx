@@ -1,11 +1,12 @@
-import type { ProductProps } from '../../types/Product.type';
+import { ProductProperties } from '#enums';
+import type { ProductProps } from '#types';
 
 import { WebComponent } from '../WebComponent/WebComponent';
 import { HorizontalProduct } from './HorizontalProduct';
 
 export class HorizontalProductWc extends WebComponent<ProductProps> {
   constructor() {
-    super(['image', 'url', 'label', 'price']);
+    super(Object.values(ProductProperties));
   }
 
   protected render(props: ProductProps): void {

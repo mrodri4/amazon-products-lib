@@ -1,6 +1,6 @@
 import type { Root } from 'react-dom/client';
 import { createRoot } from 'react-dom/client';
-import { getLibRequiredLinks } from '../../utils/required-links';
+import { getLibRequiredLinks } from '#utils';
 
 export abstract class WebComponent<P = Record<string, unknown>> extends HTMLElement {
   protected readonly mountPoint: HTMLSpanElement;

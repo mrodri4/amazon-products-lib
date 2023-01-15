@@ -6,6 +6,12 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   plugins: [react()],
   resolve: {
+    alias: {
+      '#components': path.join(__dirname, './src/components'),
+      '#enums': path.join(__dirname, './src/enums'),
+      '#types': path.join(__dirname, './src/types'),
+      '#utils': path.join(__dirname, './src/utils')
+    },
     preserveSymlinks: true
   },
   define: {

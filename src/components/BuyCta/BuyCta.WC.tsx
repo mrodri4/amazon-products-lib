@@ -1,12 +1,12 @@
-import { BuyCtaProperties } from '../../enums/BuyCta.properties';
-import type { BuyCtaProps } from '../../types/BuyCta.type';
+import { BuyCtaProperties } from '#enums';
+import type { BuyCtaProps } from '#types';
 
 import { WebComponent } from '../WebComponent/WebComponent';
 import { BuyCta } from './BuyCta';
 
 export class BuyCtaWc extends WebComponent<BuyCtaProps> {
   constructor() {
-    super(BuyCtaProperties);
+    super(Object.values(BuyCtaProperties));
   }
 
   protected render(props: BuyCtaProps): void {

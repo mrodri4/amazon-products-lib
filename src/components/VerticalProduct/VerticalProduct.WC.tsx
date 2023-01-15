@@ -1,12 +1,12 @@
-import { ProductProperties } from '../../enums/Product.properties';
-import type { ProductProps } from '../../types/Product.type';
+import { ProductProperties } from '#enums';
+import type { ProductProps } from '#types';
 
 import { WebComponent } from '../WebComponent/WebComponent';
 import { VerticalProduct } from './VerticalProduct';
 
 export class VerticalProductWc extends WebComponent<ProductProps> {
   constructor() {
-    super(ProductProperties);
+    super(Object.values(ProductProperties));
   }
 
   protected render(props: ProductProps): void {
