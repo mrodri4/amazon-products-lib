@@ -1,6 +1,11 @@
-@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
 @tailwind components;
 @tailwind utilities;
+
+*[class^='apl'] {
+  @apply apl-font-lib;
+}
 
 @layer components {
   .amazon-product-price {

@@ -13,7 +13,7 @@ export function VerticalProduct(props: ProductProps) {
   } = props;
 
   return (
-    <div className='apl-border-[1px] apl-rounded-sm apl-px-3 apl-py-4 apl-max-w-sm apl-relative'>
+    <div className='apl-border-solid apl-border-gray-300 apl-border-[1px] apl-rounded-sm apl-px-3 apl-py-4 apl-max-w-sm apl-relative'>
       {
         (typeof bestseller === 'number') && (
           <span className='apl-font-semibold apl-text-xs apl-uppercase apl-absolute apl-top-2 -apl-left-2 apl-p-1 apl-bg-cyan-300'>Bestseller nº {bestseller}</span>
